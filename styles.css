@@ -1,22 +1,29 @@
+html{
+  margin: 0;
+  padding:0;
+}
 body{
   font-size: 15px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", monospace;
   font-weight: 300;
   margin:0;
+  padding:0;
+  height: 5000px;
 }
 nav{
-  height:55px;
+  height:auto;
   width: 100%;
-  margin: 0;
+  margin:0;
   padding:0;
   background-color: rgba(255,255,255,0.25);
   border-bottom: : 1px solid rgba(0,0,0,0.10);
-  position:fixed;
   box-shadow:0 0 8px 0 rgba(0,0,0,0.25);
-
+  position: fixed;
+  top:0;
+  z-index: 10;
 }
 nav .navbar{
-  width:35%;
+  width:40%;
   margin: 0 auto;
   padding:0;
 }
@@ -25,6 +32,7 @@ nav .navbar ul{
   padding:0;
   display:flex;
   justify-content: space-between;
+  overflow: wrap;
 
 }
 nav .navbar ul li{
@@ -56,12 +64,12 @@ nav .navbar ul li a:hover{
 /*-------------------------*/
 
 .verticalLine{
-  height: 300px;
+  height: 370px;
   width: 5px;
   background-color: red;
   position:absolute;
-  margin-left:25%;
-  margin-top:10%;
+  margin-left:18%;
+  margin-top:-3%;
   animation-duration: 2s;
   animation-name: fadeIn;
   animation-fill-mode: both;
@@ -72,20 +80,20 @@ nav .navbar ul li a:hover{
     height:0px;
   }
   100%{
-    height:300px;
+    height:370px;
   }
 }
 
 /*-----------------------------*/
 
-.introBlock{
-  margin-left:27%;
-  margin-top:12%;
+.researcher {
+  margin-left:20%;
+  margin-top:18%;
   font-size: 3em;
   font-weight: 600;
 }
-
 .researcher p{
+  opacity:0;
   width: 350px;
   margin:0;
   padding:0;
@@ -96,14 +104,22 @@ nav .navbar ul li a:hover{
 
 @keyframes typing1{
   0%{
+    opacity: 100;
     width:0;
   }
   100%{
+    opacity: 100;
     width:350px;
   }
 
 }
 
+.designer {
+  margin-left:20%;
+  margin-top:1%;
+  font-size: 3em;
+  font-weight: 600;
+}
 .designer p{
   opacity:0;
   width: 350px;
@@ -125,6 +141,13 @@ nav .navbar ul li a:hover{
     width:350px;
   }
 
+}
+
+.developer {
+  margin-left:20%;
+  margin-top:1%;
+  font-size: 3em;
+  font-weight: 600;
 }
 
 .developer p{
@@ -149,3 +172,142 @@ nav .navbar ul li a:hover{
   }
 
 }
+
+/*--------------------------*/
+
+.projectsButton{
+  height:40px;
+  width:130px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-top: 3%;
+  overflow:hidden;
+
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.projectsButton a{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.projectsButton:hover{
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.projectsButton:hover a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+/*----------------------------*/
+
+.resumeButton{
+  height:40px;
+  width:130px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1%;
+  margin-top: 2%;
+  overflow:hidden;
+
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.resumeButton a{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.resumeButton:hover{
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.resumeButton:hover a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+/*---------------------------*/
+.profilePic{
+  margin-left: 60%;
+  margin-top:-28%;
+}
+
+.profilePic img {
+  width: 250px;
+  height: 350px;
+  margin: 20px;
+}
+
+.profilePic .clipOval{
+  clip-path: ellipse(120px 160px at center);
+}
+/*--------------------*/
+
+.horizontalLine{
+    width: 400px;
+    height:3px;
+    background-color: red;
+    margin-left: 0%;
+    margin-top:3%;
+    animation: hLineFadeIn 2s forwards;
+}
+
+@keyframes hLineFadeIn{
+  0%{
+    width:0px;
+  }
+  100%{
+    width:400px;
+  }
+}
+
+/*-------------------------------*/
+.aboutMe {
+  width: 600px;
+  margin-left:58%;
+  margin-top: -3.5%;
+}
+
+.aboutMe p{
+  font-weight: 600;
+  animation: paraSlideIn 3s forwards;
+  white-space: pre;
+  overflow: hidden;
+  margin-left: 100%;
+  color: rgba(0,0,0,0);
+}
+ @keyframes paraSlideIn {
+   0%{
+     margin-left: 100%;
+     color: rgba(0,0,0,0);
+     width:300%;
+   }
+   100%{
+     margin-left: 0%;
+     color: rgba(0,0,0,1);
+     width:100%;
+   }
+ }
+ .lesserLineHeight{
+   margin-top:15px;
+ }
+ .lesserLineHeight p{
+   margin:5px;
+ }
