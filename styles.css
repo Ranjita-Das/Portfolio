@@ -311,3 +311,118 @@ nav .navbar ul li a:hover{
  .lesserLineHeight p{
    margin:5px;
  }
+
+ /*-----------------------------*/
+ .PortfolioStrip{
+   height: 1200px;
+   background-color: pink;
+   margin-top:100px;
+   padding:100px;
+ }
+
+ /*---------------------------*/
+
+ .stripHeading{
+   font-size: 4em;
+   font-weight: bold;
+   margin-left: 0%;
+   width: 280px;
+   animation: stripHeadingSlideIn 2s forwards;
+ }
+ @keyframes stripHeadingSlideIn{
+   0%{
+     margin-left: 0%;
+   }
+   100%{
+     margin-left: 50%;
+     transform: translate(-50%);
+   }
+ }
+
+ .stripHeadingUnderline{
+   height:3px;
+   width:400px;
+   background-color: red;
+   margin-left: 100%;
+   animation: stripHeadingUnderlineSlideIn 2s forwards;
+ }
+ @keyframes stripHeadingUnderlineSlideIn{
+   0%{
+     margin-left: 100%;
+   }
+   100%{
+     margin-left: 50%;
+     transform: translate(-50%);
+   }
+ }
+
+ /*-------------------------------------*/
+
+.projectsGrid{
+  margin: 70px 100px;
+  background-color: red;
+  height: 700px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.row::after{
+  clear: both;
+}
+
+.col-1{
+  width:8%;
+  float: left;
+}
+
+.col-1 {
+  width: 8.33%;
+  float: left;
+}
+.col-2 {
+  width: 16.66%;
+  float: left;
+}
+.col-3 {
+  width: 25%;
+  float: left;
+}
+.col-4 {
+  width: 33.33%;
+  float: left;
+}
+.col-5 {
+  width: 41.66%;
+  float: left;
+}
+.col-6 {
+  width: 50%;
+  float: left;
+  height:100%;
+}
+.col-7 {
+  width: 58.33%;
+  float: left;
+}
+.col-8 {
+  width: 66.66%;
+  float: left;
+}
+.col-9 {
+  width: 75%;
+  float: left;
+}
+.col-10 {
+  width: 83.33%;
+  float: left;
+}
+.col-11 {
+  width: 91.66%;
+  float: left;
+}
+.col-12 {
+  width: 100%;
+  float: left;
+}
+
+/*----------------------------------*/
