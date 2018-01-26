@@ -315,7 +315,6 @@ nav .navbar ul li a:hover{
  /*-----------------------------*/
  .PortfolioStrip{
    height: 1200px;
-   background-color: pink;
    margin-top:100px;
    padding:100px;
  }
@@ -359,70 +358,115 @@ nav .navbar ul li a:hover{
  /*-------------------------------------*/
 
 .projectsGrid{
-  margin: 70px 100px;
-  background-color: red;
   height: 700px;
-  width: auto;
-  box-sizing: border-box;
+  width: 800px;
+  margin-top:70px;
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 
-.row::after{
-  clear: both;
+.gridItem{
+  background-color: white;
+  width: calc((100% - 44px * 2)/2);
+  height: calc((100% - 44px * 2)/2);
+  float: left;
+  margin: 20px;
+  box-shadow:0 0 8px 0 rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.5);
+  overflow:hidden;
+  position: relative;
 }
 
-.col-1{
-  width:8%;
-  float: left;
-}
-
-.col-1 {
-  width: 8.33%;
-  float: left;
-}
-.col-2 {
-  width: 16.66%;
-  float: left;
-}
-.col-3 {
-  width: 25%;
-  float: left;
-}
-.col-4 {
-  width: 33.33%;
-  float: left;
-}
-.col-5 {
-  width: 41.66%;
-  float: left;
-}
-.col-6 {
-  width: 50%;
-  float: left;
-  height:100%;
-}
-.col-7 {
-  width: 58.33%;
-  float: left;
-}
-.col-8 {
-  width: 66.66%;
-  float: left;
-}
-.col-9 {
-  width: 75%;
-  float: left;
-}
-.col-10 {
-  width: 83.33%;
-  float: left;
-}
-.col-11 {
-  width: 91.66%;
-  float: left;
-}
-.col-12 {
+.image{
+  opacity: 1;
   width: 100%;
-  float: left;
+  height: 100%;
+  transition: .5s ease;
+
+}
+
+.gridItem:hover .image{
+  transform: scale(1.2);
+}
+
+.projectName {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  z-index:3;
+}
+
+.gridItem:hover .projectName {
+  opacity: 1;
+}
+
+.text {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border: 2px solid white;
+}
+
+.overlay{
+  position:absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128,128,128, 0.8);
+  visibility: hidden;
+}
+
+.gridItem:hover .overlay{
+  visibility: visible;
 }
 
 /*----------------------------------*/
+
+.contactStrip{
+  height: 500px;
+  width:auto;
+  background-color: black;
+  padding:60px;
+}
+
+.contactStripHeading{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 0%;
+  width: 310px;
+  color:white;
+  animation: stripHeadingSlideIn 2s forwards;
+}
+@keyframes stripHeadingSlideIn{
+  0%{
+    margin-left: 0%;
+  }
+  100%{
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.contactStripHeadingUnderline{
+  height:3px;
+  width:400px;
+  background-color: #dfab42;
+  margin-left: 100%;
+  animation: stripHeadingUnderlineSlideIn 2s forwards;
+}
+@keyframes stripHeadingUnderlineSlideIn{
+  0%{
+    margin-left: 100%;
+  }
+  100%{
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+}
