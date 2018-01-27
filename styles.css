@@ -515,3 +515,22 @@ input[type=submit] {
   transform: translate(-50%, -70%);
   font-size: 15px;
 }
+
+/*-------------------------*/
+.resumeStrip{
+  height: 2000px;
+  padding: 50px 300px;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+ .resumeStrip .image1{
+   margin-top: 50px;
+   height:50%;
+   width:100%;
+ }
+
+ .resumeStrip .image2{
+   margin-top: 0;
+   height:50%;
+   width:100%;
+ }
